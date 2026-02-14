@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -134,6 +135,281 @@ export default function Home() {
             <p className="mt-3 text-sm text-white/90">{item.desc}</p>
           </motion.div>
         ))}
+      </motion.section>
+
+      {/* Portfolio Showcase - IT Project */}
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+        className="space-y-6"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#0ea5e9] to-[#6b7bff]" />
+            <h2 className="text-2xl font-bold text-[#1c142c] sm:text-3xl">
+              IT Project
+            </h2>
+          </div>
+          <Link
+            href="/it-project"
+            className="flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-[#0ea5e9] transition-all hover:bg-[#0ea5e9] hover:text-white"
+          >
+            Lihat Semua
+            <Icon icon="mdi:arrow-right" className="text-base" aria-hidden />
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+          {[
+            {
+              name: "Neon Studio Dashboard",
+              role: "UI/UX + Frontend",
+              desc: "Dashboard analytics dengan animasi halus dan sistem design modular.",
+              accent: "from-[#0ea5e9] to-[#6b7bff]",
+              icon: "mdi:view-dashboard-outline",
+              image:
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+              alt: "Dashboard analytics",
+              badge: "Frontend",
+            },
+            {
+              name: "Aurora Booking",
+              role: "Fullstack",
+              desc: "Sistem booking dengan pengalaman mobile-first dan integrasi kalender.",
+              accent: "from-[#10b981] to-[#00c6ae]",
+              icon: "mdi:calendar-check",
+              image:
+                "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+              alt: "Booking system",
+              badge: "Fullstack",
+            },
+            {
+              name: "Citrus Commerce",
+              role: "Frontend",
+              desc: "E-commerce landing page dengan visual editorial dan katalog produk.",
+              accent: "from-[#f43f5e] to-[#ff5e7d]",
+              icon: "mdi:shopping-outline",
+              image:
+                "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+              alt: "Commerce platform",
+              badge: "Commerce",
+            },
+          ].map((project, index) => (
+            <motion.div 
+              key={project.name} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -4 }}
+              className={`group rounded-3xl bg-gradient-to-br ${project.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden sm:p-5`}
+            >
+              <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
+                <Image
+                  src={project.image}
+                  alt={project.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h3 className="text-sm font-bold text-white sm:text-base leading-snug">
+                  {project.name}
+                </h3>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-1 text-[10px] font-bold text-white/90 flex-shrink-0">
+                  {project.badge}
+                </span>
+              </div>
+              <p className="text-xs text-white/80 sm:text-sm">{project.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Portfolio Showcase - Fotografer */}
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+        className="space-y-6"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#ff5e7d] to-[#ffc857]" />
+            <h2 className="text-2xl font-bold text-[#1c142c] sm:text-3xl">
+              Fotografer
+            </h2>
+          </div>
+          <Link
+            href="/fotografer"
+            className="flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-[#ff5e7d] transition-all hover:bg-[#ff5e7d] hover:text-white"
+          >
+            Lihat Semua
+            <Icon icon="mdi:arrow-right" className="text-base" aria-hidden />
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+          {[
+            {
+              title: "Portrait Editorial",
+              desc: "Tone sinematik, pencahayaan kontras, dan ekspresi kuat.",
+              icon: "mdi:account-eye",
+              image:
+                "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
+              alt: "Portrait Editorial",
+              accent: "from-[#ff5e7d] to-[#ffc857]",
+              tag: "Portrait",
+              link: "/fotografer/portrait",
+            },
+            {
+              title: "Brand Lifestyle",
+              desc: "Visual bercerita untuk kampanye dan katalog digital.",
+              icon: "mdi:bag-personal",
+              image:
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+              alt: "Brand Lifestyle",
+              accent: "from-[#6b7bff] to-[#00c6ae]",
+              tag: "Lifestyle",
+              link: "/fotografer/lifestyle",
+            },
+            {
+              title: "Event & Stage",
+              desc: "Moment, energi, dan dokumentasi yang tetap elegan.",
+              icon: "mdi:party-popper",
+              image:
+                "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80",
+              alt: "Event & Stage",
+              accent: "from-[#fbbf24] to-[#f97316]",
+              tag: "Event",
+              link: "/fotografer/event",
+            },
+          ].map((photo, index) => (
+            <Link
+              key={photo.title}
+              href={photo.link}
+              className="group"
+            >
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -4 }}
+                className={`rounded-3xl bg-gradient-to-br ${photo.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden h-full sm:p-5`}
+              >
+                <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
+                  <Image
+                    src={photo.image}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h3 className="text-sm font-bold text-white sm:text-base leading-snug">
+                    {photo.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-1 text-[10px] font-bold text-white/90 flex-shrink-0">
+                    {photo.tag}
+                  </span>
+                </div>
+                <p className="text-xs text-white/80 sm:text-sm">{photo.desc}</p>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Portfolio Showcase - Desain Grafis */}
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+        className="space-y-6"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#00c6ae] to-[#6b7bff]" />
+            <h2 className="text-2xl font-bold text-[#1c142c] sm:text-3xl">
+              Desain Grafis
+            </h2>
+          </div>
+          <Link
+            href="/desain-grafis"
+            className="flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-[#00c6ae] transition-all hover:bg-[#00c6ae] hover:text-white"
+          >
+            Lihat Semua
+            <Icon icon="mdi:arrow-right" className="text-base" aria-hidden />
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+          {[
+            {
+              title: "Brand Identity",
+              desc: "Logo, sistem warna, dan guideline untuk konsistensi brand.",
+              accent: "from-[#ffc857] to-[#ff8a00]",
+              icon: "mdi:shape-outline",
+              image:
+                "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80",
+              alt: "Brand Identity",
+              tag: "Branding",
+            },
+            {
+              title: "Campaign Visual",
+              desc: "Poster, key visual, dan social kit dengan tone yang berani.",
+              accent: "from-[#6b7bff] to-[#8b5cf6]",
+              icon: "mdi:chart-box-outline",
+              image:
+                "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+              alt: "Campaign Visual",
+              tag: "Campaign",
+            },
+            {
+              title: "Packaging",
+              desc: "Struktur kemasan yang premium dan mudah dikenali.",
+              accent: "from-[#00c6ae] to-[#06b6d4]",
+              icon: "mdi:package-variant-closed",
+              image:
+                "https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=600",
+              alt: "Packaging",
+              tag: "Packaging",
+            },
+          ].map((design, index) => (
+            <motion.div 
+              key={design.title} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -4 }}
+              className={`group rounded-3xl bg-gradient-to-br ${design.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden sm:p-5`}
+            >
+              <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
+                <Image
+                  src={design.image}
+                  alt={design.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h3 className="text-sm font-bold text-white sm:text-base leading-snug">
+                  {design.title}
+                </h3>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-1 text-[10px] font-bold text-white/90 flex-shrink-0">
+                  {design.tag}
+                </span>
+              </div>
+              <p className="text-xs text-white/80 sm:text-sm">{design.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </motion.section>
 
       <motion.section 
