@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BottomNav from "./components/BottomNav";
 import "./globals.css";
 
 const displayFont = Bebas_Neue({
@@ -39,10 +40,11 @@ export default function RootLayout({
             <div className="absolute bottom-0 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,_rgba(0,198,174,0.35),_transparent_70%)] blur-3xl" />
           </div>
           <Header />
-          <main className="relative px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-12 md:px-12 lg:px-20">
+          <main className="relative px-4 pb-32 pt-8 sm:px-6 sm:pb-16 sm:pt-12 md:px-12 md:pb-16 lg:px-20">
             {children}
           </main>
           <Footer />
+          <BottomNav />
         </div>
       </body>
     </html>

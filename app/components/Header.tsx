@@ -33,7 +33,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex items-center justify-center rounded-2xl border border-[#1c142c]/10 bg-white/80 p-2 text-[#1c142c] shadow-sm transition hover:bg-[#ffc857] md:hidden"
+            className="hidden items-center justify-center rounded-2xl border border-[#1c142c]/10 bg-white/80 p-2 text-[#1c142c] shadow-sm transition hover:bg-[#ffc857]"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -60,7 +60,7 @@ export default function Header() {
           </nav>
         </div>
         <nav
-          className={`mt-4 grid gap-2 text-sm font-semibold text-[#2a2340] md:hidden ${
+          className={`mt-4 hidden gap-2 text-sm font-semibold text-[#2a2340] md:hidden ${
             isOpen ? "block" : "hidden"
           }`}
         >
