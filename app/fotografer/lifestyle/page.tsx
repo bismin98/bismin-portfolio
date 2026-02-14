@@ -66,6 +66,16 @@ export default function LifestyleGalleryPage() {
     }
   };
 
+  const handleDragEnd = (info: any) => {
+    const threshold = 50;
+    
+    if (info.offset.x > threshold) {
+      handlePrevious();
+    } else if (info.offset.x < -threshold) {
+      handleNext();
+    }
+  };
+
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-12">
       {/* Header */}
@@ -186,9 +196,13 @@ export default function LifestyleGalleryPage() {
           )}
 
           {/* Image container */}
-          <div 
+          <motion.div 
             className="relative max-h-[90vh] max-w-5xl"
             onClick={(e) => e.stopPropagation()}
+            drag="x"
+            dragElastic={0.2}
+            dragConstraints={{ left: -100, right: 100 }}
+            onDragEnd={(e, info) => handleDragEnd(info)}
           >
             <div className="relative h-[80vh] w-[90vw] max-w-5xl">
               <Image
@@ -217,7 +231,7 @@ export default function LifestyleGalleryPage() {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </div>
