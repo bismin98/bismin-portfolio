@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Minvect | Portfolio",
   description:
     "Portfolio colorfull dengan perpaduan fotografer, desain grafis, dan programmer.",
+  icons: {
+    icon: "/mimin.png",
+  },
 };
 
 export default function RootLayout({
