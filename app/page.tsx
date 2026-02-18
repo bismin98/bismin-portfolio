@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { photoSets } from "./data/photoSets";
@@ -35,12 +34,10 @@ export default function Home() {
         >
           <div className="absolute inset-[-0.5rem_-0.25rem_-0.5rem_-0.25rem] -rotate-3 rounded-2xl bg-[linear-gradient(135deg,_rgba(255,200,87,0.8),_rgba(255,94,125,0.8),_rgba(107,123,255,0.8))] blur-2xl opacity-50" />
           <div className="relative h-[350px] w-full overflow-hidden rounded-3xl sm:h-[400px] lg:h-[480px]">
-            <Image
+            <img
               src="/Bismin3.png"
               alt="Foto profil Bismin"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="scale-x-[-1] object-contain object-[center_25%]"
+              className="absolute inset-0 h-full w-full scale-x-[-1] object-contain object-[center_25%]"
             />
           </div>
           <div className="-mt-8 inline-flex w-full justify-center justify-self-end sm:-mt-10 lg:-mt-12">
@@ -175,13 +172,10 @@ export default function Home() {
               className={`group rounded-3xl bg-gradient-to-br ${project.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden sm:p-5`}
             >
               <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
-                <Image
+                <img
                   src={project.image}
                   alt={project.alt}
-                  fill
-                  unoptimized
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="flex items-start justify-between gap-3 mb-2">
@@ -237,13 +231,10 @@ export default function Home() {
                 className={`rounded-3xl bg-gradient-to-br ${photo.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden h-full sm:p-5`}
               >
                 <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
-                  <Image
+                  <img
                     src={photo.image}
                     alt={photo.alt}
-                    fill
-                    unoptimized
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <div className="flex items-start justify-between gap-3 mb-2">
@@ -296,13 +287,10 @@ export default function Home() {
               className={`group rounded-3xl bg-gradient-to-br ${design.accent} p-4 shadow-[0_15px_30px_-15px_rgba(28,20,44,0.5)] overflow-hidden sm:p-5`}
             >
               <div className="relative h-40 rounded-2xl overflow-hidden mb-4 sm:h-44">
-                <Image
+                <img
                   src={design.image}
                   alt={design.alt}
-                  fill
-                  unoptimized
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="flex items-start justify-between gap-3 mb-2">

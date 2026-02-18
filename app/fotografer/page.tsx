@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { photoSets } from "../data/photoSets";
@@ -66,13 +65,10 @@ export default function FotograferPage() {
 
             <div className="relative h-80 w-full overflow-hidden">
               {/* Image */}
-              <Image
+              <img
                 src={item.image}
                 alt={item.alt}
-                fill
-                unoptimized
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
               {/* Overlay gradient */}

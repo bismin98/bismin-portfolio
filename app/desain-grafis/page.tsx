@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { graphicWorks } from "../data/graphicWorks";
 
@@ -127,13 +126,10 @@ export default function DesainGrafisPage() {
 
               {/* Image with overlay */}
               <div className="relative mb-6 h-44 w-full overflow-hidden rounded-2xl">
-                <Image
+                <img
                   src={work.image}
                   alt={work.alt}
-                  fill
-                  unoptimized
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 {/* Corner accent */}

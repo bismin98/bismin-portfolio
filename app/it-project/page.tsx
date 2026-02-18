@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { itProjects } from "../data/itProjects";
 
@@ -130,13 +129,10 @@ export default function ItProjectPage() {
 
               {/* Image with overlay */}
               <div className="relative mb-6 h-44 w-full overflow-hidden rounded-2xl">
-                <Image
+                <img
                   src={project.image}
                   alt={project.alt}
-                  fill
-                  unoptimized
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 {/* Corner accent */}
