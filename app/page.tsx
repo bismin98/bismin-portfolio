@@ -179,6 +179,7 @@ export default function Home() {
                   src={project.image}
                   alt={project.alt}
                   fill
+                  unoptimized
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
@@ -240,6 +241,7 @@ export default function Home() {
                     src={photo.image}
                     alt={photo.alt}
                     fill
+                    unoptimized
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
@@ -298,6 +300,7 @@ export default function Home() {
                   src={design.image}
                   alt={design.alt}
                   fill
+                  unoptimized
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

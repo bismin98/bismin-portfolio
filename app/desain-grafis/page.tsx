@@ -131,6 +131,7 @@ export default function DesainGrafisPage() {
                   src={work.image}
                   alt={work.alt}
                   fill
+                  unoptimized
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />

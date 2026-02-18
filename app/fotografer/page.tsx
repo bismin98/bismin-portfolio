@@ -70,6 +70,7 @@ export default function FotograferPage() {
                 src={item.image}
                 alt={item.alt}
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />

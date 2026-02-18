@@ -134,6 +134,7 @@ export default function ItProjectPage() {
                   src={project.image}
                   alt={project.alt}
                   fill
+                  unoptimized
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
