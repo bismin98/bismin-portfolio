@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    unoptimized: process.env.NODE_ENV === "production",
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
