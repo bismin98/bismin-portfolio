@@ -21,10 +21,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: "mdi:instagram", href: "#", label: "Instagram" },
-                { icon: "mdi:linkedin", href: "#", label: "LinkedIn" },
-                { icon: "mdi:github", href: "#", label: "GitHub" },
-                { icon: "mdi:whatsapp", href: "#", label: "WhatsApp" },
+                { icon: "mdi:instagram", href: "https://www.instagram.com/bismin__", label: "Instagram" },
+                { icon: "mdi:linkedin", href: "https://www.linkedin.com/in/bismin-ibrahim-662361177/", label: "LinkedIn" },
+                { icon: "mdi:github", href: "https://github.com/bismin98", label: "GitHub" },
+                { icon: "mdi:whatsapp", href: "https://wa.me/6285205088544", label: "WhatsApp" },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -95,18 +95,18 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm text-[#4a3a6a] transition-colors hover:text-[#ff5e7d]"
               >
                 <Icon icon="mdi:email-outline" className="text-base" aria-hidden />
-                bismin@studio.com
+                bismin.ibrahim@gmail.com
               </a>
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6285205088544"
                 className="flex items-center gap-2 text-sm text-[#4a3a6a] transition-colors hover:text-[#00c6ae]"
               >
                 <Icon icon="mdi:whatsapp" className="text-base" aria-hidden />
-                +62 812 3456 7890
+                +62 852 0508 8544
               </a>
               <p className="flex items-center gap-2 text-sm text-[#4a3a6a]">
                 <Icon icon="mdi:map-marker" className="text-base" aria-hidden />
-                Indonesia
+                Kota Balikpapan
               </p>
             </div>
           </div>

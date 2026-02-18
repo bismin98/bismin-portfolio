@@ -81,7 +81,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="nama@email.com"
+                  placeholder="contoh: akun@email.com"
                   className="w-full rounded-xl border-2 border-white/40 bg-white/60 backdrop-blur px-4 py-3 text-sm text-[#1c142c] placeholder:text-[#4a3a6a]/50 focus:outline-none focus:ring-2 focus:ring-[#00c6ae] focus:border-transparent transition-all"
                 />
               </div>
@@ -135,9 +135,9 @@ export default function ContactPage() {
             <p className="text-sm text-white/70 mb-6">Follow dan connect dengan saya di platform lain</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { icon: "mdi:instagram", label: "Instagram", color: "from-[#f43f5e] to-[#f97316]", link: "#" },
-                { icon: "mdi:linkedin", label: "LinkedIn", color: "from-[#0ea5e9] to-[#06b6d4]", link: "#" },
-                { icon: "mdi:github", label: "GitHub", color: "from-[#6b7bff] to-[#8b5cf6]", link: "#" },
+                { icon: "mdi:instagram", label: "Instagram", color: "from-[#f43f5e] to-[#f97316]", link: "https://www.instagram.com/bismin__" },
+                { icon: "mdi:linkedin", label: "LinkedIn", color: "from-[#0ea5e9] to-[#06b6d4]", link: "https://www.linkedin.com/in/bismin-ibrahim-662361177/" },
+                { icon: "mdi:github", label: "GitHub", color: "from-[#6b7bff] to-[#8b5cf6]", link: "https://github.com/bismin98" },
                 { icon: "mdi:behance", label: "Behance", color: "from-[#3b82f6] to-[#6366f1]", link: "#" },
               ].map((social) => (
                 <a
@@ -169,25 +169,25 @@ export default function ContactPage() {
               Respon cepat dalam 24 jam untuk semua inquiry
             </p>
             <div className="space-y-4">
-              <a href="mailto:halo@bismin.studio" className="flex items-start gap-3 p-4 rounded-xl bg-white/20 backdrop-blur transition-all hover:bg-white/30">
+              <a href="mailto:bismin.ibrahim@gmail.com" className="flex items-start gap-3 p-4 rounded-xl bg-white/20 backdrop-blur transition-all hover:bg-white/30">
                 <Icon icon="mdi:email-outline" className="text-xl text-white flex-shrink-0 mt-0.5" aria-hidden />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wide text-white/70">Email</p>
-                  <p className="text-sm font-bold text-white">halo@minvect.studio</p>
+                  <p className="text-sm font-bold text-white">bismin.ibrahim@gmail.com</p>
                 </div>
               </a>
-              <a href="https://wa.me/6281234567890" className="flex items-start gap-3 p-4 rounded-xl bg-white/20 backdrop-blur transition-all hover:bg-white/30">
+              <a href="https://wa.me/6285205088544" className="flex items-start gap-3 p-4 rounded-xl bg-white/20 backdrop-blur transition-all hover:bg-white/30">
                 <Icon icon="mdi:whatsapp" className="text-xl text-white flex-shrink-0 mt-0.5" aria-hidden />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wide text-white/70">WhatsApp</p>
-                  <p className="text-sm font-bold text-white">+62 812 3456 7890</p>
+                  <p className="text-sm font-bold text-white">+62 852 0508 8544</p>
                 </div>
               </a>
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/20 backdrop-blur">
                 <Icon icon="mdi:map-marker" className="text-xl text-white flex-shrink-0 mt-0.5" aria-hidden />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wide text-white/70">Location</p>
-                  <p className="text-sm font-bold text-white">Jakarta, Indonesia</p>
+                  <p className="text-sm font-bold text-white">Jl. Besaki VII, No.BG30, Balikpapan Regency, Kota Balikpapan, Kalimantan Timur, Indonesia</p>
                 </div>
               </div>
             </div>
