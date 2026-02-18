@@ -18,7 +18,7 @@ export default function Home() {
           className="flex flex-col gap-5 sm:gap-6 order-1 md:col-start-1 md:row-start-1 w-full"
         >
           <h1 className="text-display text-4xl leading-[0.95] text-center sm:text-left bg-gradient-to-r from-[#6b7bff] via-[#ff5e7d] to-[#ffc857] bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl max-w-[300px] sm:max-w-none mx-auto sm:mx-0">
-            Portfolio yang menyatukan cerita visual dan solusi digital.
+            Portfolio saya yang menyatukan cerita visual dan solusi digital.
           </h1>
           <p className="max-w-xl text-base text-center sm:text-left text-[#41345f] sm:text-lg">
             Halo, saya BISMIN S.KOM. Saya menciptakan foto bercerita, identitas visual

@@ -18,11 +18,25 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bismin-portfolio.vercel.app"),
   title: "Minvect | Portfolio",
   description:
     "Portfolio colorfull dengan perpaduan fotografer, desain grafis, dan programmer.",
   icons: {
     icon: "/mimin.png",
+  },
+  openGraph: {
+    title: "Minvect | Portfolio",
+    description:
+      "Portfolio colorfull dengan perpaduan fotografer, desain grafis, dan programmer.",
+    images: [
+      {
+        url: "/mimin.png",
+        width: 1200,
+        height: 630,
+        alt: "Minvect Portfolio",
+      },
+    ],
   },
 };
 
